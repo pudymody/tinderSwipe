@@ -24,7 +24,7 @@ function add( name ){
     $VIEW.children[0].className += ' '+name;
 }
 function getPerson(cb){
-    var url = "https://randomuser.me/api/?gender=female";
+    var url = "https://randomuser.me/api/";
     var oReq = new XMLHttpRequest();
         oReq.addEventListener('load', function(){
             var data = JSON.parse(this.responseText);
