@@ -28,7 +28,7 @@ function getPerson(cb){
     var oReq = new XMLHttpRequest();
         oReq.addEventListener('load', function(){
             var data = JSON.parse(this.responseText);
-            data = data.results[0].user;
+            data = data.results[0];
             var html = '<div class="user-card"><img class="user-card__picture" src="'+data.picture.large+'"></img><h1 class="user-card__name">'+data.name.first+' '+data.name.last+'</h1></div>';
             $VIEW.innerHTML = html;
         });
